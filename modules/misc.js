@@ -14,7 +14,7 @@ export async function exportJson(path) { // god bless chat gpt 🙏
     try {
         const response = await fetch(path);
         if (!response.ok) {
-            throw new Error(`Ошибка HTTP: ${response.status}`);
+            throw new Error(`Ошибка HTTP: ${response.status}`, ", путь: ", path);
         }
         return await response.json();
     } catch (error) {
