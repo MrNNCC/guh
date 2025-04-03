@@ -48,9 +48,9 @@ export default class gameClass {
         this.scene = new scene()
         this.scene.newCtx(this.canvas)
 
-        let settings = await exportJson("../settings.json")
+        //let settings = await exportJson("../settings.json")
 
-        this.loadedscene = await this.scene.loadScene("../scenes/"+settings.mainScene+".js")
+        this.loadedscene = await this.scene.loadScene("../scenes/game.js")
         this.loadedscene.init(this.scene.ctx,this.FireEvent)
         this.Objects = [this]
     }
