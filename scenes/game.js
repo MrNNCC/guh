@@ -7,6 +7,7 @@ function objLength(obj) {
     return Object.keys(obj).length
 }
 
+
 const InputHandler = new InputHandlerClass()
 
 const bg = new frame()
