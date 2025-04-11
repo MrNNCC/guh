@@ -27,6 +27,7 @@ export default class gameClass {
             switch(command) {
                 case "addObject":
                     args.forEach(element => {
+                        element.FireEvent = this.FireEvent
                         this.Objects.push(element)
                     });
                 default:

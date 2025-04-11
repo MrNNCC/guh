@@ -13,6 +13,7 @@ export default class frame {
         this.text = ""
         this.textColor = ""
         this.textFont = "10px sans-serif"
+        this.lineHeight = 24
 
         //image
         this.image = null
@@ -47,11 +48,17 @@ export default class frame {
         }
 
         //Text
+        let text = this.text
+        let splitted = text.split("\n")
         ctx.font(this.textFont)
         ctx.fillStyle(this.textColor)
         ctx.textAlign("start")
         ctx.textBaseline("middle")
-        ctx.fillText(this.text, new vec2(x + this.size.x / 25, y + this.size.y / 8))
+
+
+        for (let i = 0;i < splitted.length;i++) {
+            ctx.fillText(splitted[i], new vec2(x + this.size.x / 25, (y + this.size.y / 8) + (this.lineHeight * i) ))
+        }
 
         ctx.restore()
     }
