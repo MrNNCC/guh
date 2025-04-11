@@ -13,7 +13,8 @@ const dialogText = [
     "",
     "dsl;kfsdgsdmgsfkdmvcxvxf.xf,d;f",
     `The quick brown fox jumps over the lazy dog`,
-    "Нігінійсі",
+    "hewwo",
+    "gooodbye",
     ""
 ]
 
